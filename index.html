@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
   <title>Sattwik Sinha Mahapatra | Portfolio</title>
   <meta name="description" content="Aspiring Web Developer & MCA Student">
 
@@ -54,9 +55,9 @@
     class="fixed top-0 left-0 w-1.5 h-1.5 bg-white rounded-full mix-blend-difference pointer-events-none z-[9999] hidden lg:block transition-transform duration-150"
     style="transform: translate(-50%, -50%);"></div>
 
-  <nav class="fixed top-0 inset-x-0 z-50 flex justify-center p-4 md:p-6 pointer-events-none">
+  <nav class="fixed top-0 inset-x-0 z-50 flex justify-center p-3 md:p-6 pointer-events-none">
     <div id="navbar-container"
-      class="w-full max-w-6xl flex items-center justify-between px-5 py-3 transition-all duration-500 rounded-full border border-transparent pointer-events-auto">
+      class="relative z-50 w-full max-w-6xl flex items-center justify-between px-4 py-3 md:px-5 transition-all duration-500 rounded-full border border-transparent pointer-events-auto">
       <a href="#" class="flex items-center gap-2 group text-white z-[70]">
         <span class="font-bold tracking-tighter text-xl font-space">SATTWIK.</span>
       </a>
@@ -87,18 +88,18 @@
     </div>
 
     <div id="mobile-menu"
-      class="fixed inset-0 bg-black/95 backdrop-blur-3xl z-40 flex flex-col items-center justify-center p-6 pointer-events-auto transition-transform duration-500 translate-y-[-100%]">
-      <div class="flex flex-col items-center gap-8 w-full mt-10">
+      class="fixed inset-0 bg-black/95 backdrop-blur-2xl z-40 flex flex-col items-center justify-center p-6 pointer-events-auto transition-transform duration-500 -translate-y-full">
+      <div class="flex flex-col items-center gap-6 w-full mt-10">
         <a href="#"
-          class="mobile-link text-2xl font-bold text-white active:scale-95 transition-transform block py-2">Home</a>
+          class="mobile-link text-3xl font-bold text-white active:scale-95 transition-transform block py-2">Home</a>
         <a href="#education"
-          class="mobile-link text-2xl font-bold text-white active:scale-95 transition-transform block py-2">Education</a>
+          class="mobile-link text-3xl font-bold text-white active:scale-95 transition-transform block py-2">Education</a>
         <a href="#skills"
-          class="mobile-link text-2xl font-bold text-white active:scale-95 transition-transform block py-2">Skills</a>
+          class="mobile-link text-3xl font-bold text-white active:scale-95 transition-transform block py-2">Skills</a>
         <a href="#certificates"
-          class="mobile-link text-2xl font-bold text-white active:scale-95 transition-transform block py-2">Certificates</a>
+          class="mobile-link text-3xl font-bold text-white active:scale-95 transition-transform block py-2">Certificates</a>
         <a href="#projects"
-          class="mobile-link text-2xl font-bold text-white active:scale-95 transition-transform block py-2">Projects</a>
+          class="mobile-link text-3xl font-bold text-white active:scale-95 transition-transform block py-2">Projects</a>
       </div>
     </div>
   </nav>
@@ -106,85 +107,95 @@
   <main class="relative">
 
     <section id="hero"
-      class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden px-6 bg-white">
+      class="relative flex min-h-[100svh] w-full flex-col items-center justify-center overflow-hidden px-4 md:px-6 bg-white pt-20">
       <div
-        class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#0000000a_1px,transparent_1px),linear-gradient(to_bottom,#0000000a_1px,transparent_1px)] bg-[size:40px_40px]">
+        class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#0000000a_1px,transparent_1px),linear-gradient(to_bottom,#0000000a_1px,transparent_1px)] bg-[size:30px_30px] md:bg-[size:40px_40px]">
       </div>
-      <div id="hero-glow" class="pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-500"
+      <div id="hero-glow"
+        class="pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-500 hidden md:block"
         style="background: radial-gradient(400px circle at 50% 50%, rgba(0,0,0,0.03), transparent 80%);"></div>
 
       <div class="relative z-20 flex flex-col items-center text-center fade-in-up mt-10">
-        <h1 class="mb-6 max-w-3xl text-4xl font-bold tracking-tight text-black md:text-5xl lg:text-7xl font-space">
+        <h1
+          class="mb-4 md:mb-6 max-w-3xl text-4xl font-bold tracking-tight text-black md:text-5xl lg:text-7xl font-space leading-tight">
           Hi, I'm <span class="text-zinc-500">Sattwik</span> <br />
           <span class="text-zinc-600">I build </span>
-          <span id="flip-word" class="text-black transition-opacity duration-300">Modern</span>
-          <span class="text-zinc-400"> Websites</span>
+          <span id="flip-word"
+            class="text-black transition-opacity duration-300 inline-block min-w-[150px]">Modern</span>
+          <span class="text-zinc-400">Websites</span>
         </h1>
-        <p class="mx-auto mb-10 max-w-2xl text-sm leading-relaxed text-zinc-600 md:text-base">
+        <p class="mx-auto mb-8 md:mb-10 max-w-2xl text-sm leading-relaxed text-zinc-600 md:text-base px-2">
           Aspiring Web Developer & MCA student with a strong foundation in modern web technologies.
           Dedicated to building responsive, user-friendly interfaces, focusing on seamless experiences and visually
           appealing designs.
         </p>
-        <div class="flex flex-col items-center justify-center gap-10 md:flex-row">
+        <div class="flex flex-col items-center justify-center gap-6 md:gap-10 md:flex-row w-full md:w-auto px-4">
           <a href="#projects"
-            class="group relative flex h-12 w-44 items-center justify-center gap-3 rounded-full border border-black bg-black text-white transition-all text-xs font-bold uppercase tracking-widest hover:bg-zinc-800"
+            class="group relative flex h-14 md:h-12 w-full md:w-44 items-center justify-center gap-3 rounded-full border border-black bg-black text-white transition-all text-sm md:text-xs font-bold uppercase tracking-widest hover:bg-zinc-800"
             data-magnetic>
             <i data-feather="folder" class="w-4 h-4 text-blue-400 transition-transform group-hover:-translate-y-1"></i>
             View Work
           </a>
           <a href="#contact"
-            class="group flex items-center gap-3 text-[10px] font-black tracking-[0.25em] text-zinc-500 uppercase transition-colors hover:text-black"
+            class="group flex items-center gap-3 text-xs md:text-[10px] font-black tracking-[0.2em] md:tracking-[0.25em] text-zinc-500 uppercase transition-colors hover:text-black py-3"
             data-magnetic>
             Contact Me
             <i data-feather="message-square"
-              class="w-3.5 h-3.5 text-zinc-400 transition-transform group-hover:rotate-12 group-hover:text-blue-500"></i>
+              class="w-4 h-4 md:w-3.5 md:h-3.5 text-zinc-400 transition-transform group-hover:rotate-12 group-hover:text-blue-500"></i>
           </a>
         </div>
       </div>
 
-      <div class="absolute bottom-16 w-full z-10">
-        <div class="relative flex overflow-hidden py-6 mask-marquee">
-          <div class="flex min-w-full shrink-0 items-center justify-around gap-20 px-10 animate-marquee w-max">
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
-                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Java</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
-                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Python</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
-                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">HTML5</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
-                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">CSS3</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
-                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Tailwind</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
-                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Vercel</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
-                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Linux</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
-                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Java</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
-                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Python</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
-                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">HTML5</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
-                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">CSS3</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
-                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Tailwind</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
-                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Vercel</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
-                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Linux</span></div>
+      <div class="absolute bottom-10 md:bottom-16 w-full z-10">
+        <div class="relative flex overflow-hidden py-4 md:py-6 mask-marquee">
+          <div
+            class="flex min-w-full shrink-0 items-center justify-around gap-12 md:gap-20 px-4 md:px-10 animate-marquee w-max">
+            <div class="flex items-center gap-2 md:gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Java</span></div>
+            <div class="flex items-center gap-2 md:gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Python</span>
+            </div>
+            <div class="flex items-center gap-2 md:gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">HTML5</span></div>
+            <div class="flex items-center gap-2 md:gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">CSS3</span></div>
+            <div class="flex items-center gap-2 md:gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Tailwind</span>
+            </div>
+            <div class="flex items-center gap-2 md:gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Vercel</span>
+            </div>
+            <div class="flex items-center gap-2 md:gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Linux</span></div>
+            <div class="flex items-center gap-2 md:gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Java</span></div>
+            <div class="flex items-center gap-2 md:gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Python</span>
+            </div>
+            <div class="flex items-center gap-2 md:gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">HTML5</span></div>
+            <div class="flex items-center gap-2 md:gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">CSS3</span></div>
+            <div class="flex items-center gap-2 md:gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Tailwind</span>
+            </div>
+            <div class="flex items-center gap-2 md:gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Vercel</span>
+            </div>
+            <div class="flex items-center gap-2 md:gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[10px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Linux</span></div>
           </div>
         </div>
       </div>
-      <div class="absolute bottom-0 h-40 w-full bg-gradient-to-t from-white to-transparent z-0"></div>
+      <div class="absolute bottom-0 h-24 md:h-40 w-full bg-gradient-to-t from-white to-transparent z-0"></div>
     </section>
 
-    <section id="education" class="relative w-full bg-[#050505] py-24 md:py-48 text-white overflow-hidden">
-      <div class="container relative z-10 mx-auto px-6 max-w-5xl">
-        <div class="mb-24 md:mb-40 flex items-end gap-6 fade-in-up">
-          <h2 class="text-5xl md:text-6xl font-bold tracking-tighter leading-[0.9] font-space">Education</h2>
+    <section id="education" class="relative w-full bg-[#050505] py-20 md:py-40 text-white overflow-hidden scroll-mt-10">
+      <div class="container relative z-10 mx-auto px-5 md:px-6 max-w-5xl">
+        <div class="mb-16 md:mb-32 flex items-end gap-4 md:gap-6 fade-in-up">
+          <h2 class="text-4xl md:text-6xl font-bold tracking-tighter leading-[0.9] font-space">Education</h2>
 
-          <div class="stairs-loader pb-2">
+          <div class="stairs-loader pb-1 md:pb-2">
             <div class="stair-bar"></div>
             <div class="stair-bar"></div>
             <div class="stair-bar"></div>
@@ -193,89 +204,97 @@
         </div>
 
         <div class="relative">
-          <div class="absolute left-0 md:-left-[27px] top-0 bottom-0 w-px bg-zinc-900 hidden md:block">
+          <div class="absolute left-[16px] md:-left-[27px] top-0 bottom-0 w-px bg-zinc-900 block">
             <div id="timeline-progress"
               class="absolute top-0 left-0 w-full bg-gradient-to-b from-blue-500 via-white to-transparent origin-top transition-transform duration-75">
             </div>
           </div>
 
-          <div class="relative mb-24 last:mb-0 group stair-step-up">
+          <div class="relative mb-16 md:mb-24 last:mb-0 group stair-step-up pl-12 md:pl-0">
             <div
-              class="absolute left-0 md:left-[calc(-27px-4px)] top-10 z-20 hidden md:block h-2 w-2 rounded-full border border-white/20 bg-zinc-950 transition-all duration-500 group-hover:bg-white group-hover:scale-150 group-hover:border-white">
+              class="absolute left-[13px] md:left-[calc(-27px-4px)] top-8 md:top-10 z-20 block h-2 w-2 rounded-full border border-white/20 bg-zinc-950 transition-all duration-500 group-hover:bg-white md:group-hover:scale-150 group-hover:border-white">
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-8 items-start">
-              <div class="space-y-3 pt-2">
+            <div class="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-4 md:gap-8 items-start">
+              <div class="space-y-2 md:space-y-3 pt-1 md:pt-2">
                 <div
-                  class="flex items-center gap-2 text-zinc-400 font-bold uppercase tracking-[0.2em] text-[10px] opacity-50 group-hover:opacity-100 transition-opacity">
+                  class="flex items-center gap-2 text-zinc-400 font-bold uppercase tracking-[0.2em] text-[10px] opacity-100 md:opacity-50 md:group-hover:opacity-100 transition-opacity">
                   <i data-feather="calendar" class="w-3.5 h-3.5"></i>2025 — Ongoing
                 </div>
                 <div class="flex items-center gap-2 text-zinc-600 font-semibold text-[9px] uppercase tracking-widest"><i
                     data-feather="map-pin" class="w-3.5 h-3.5"></i>Bhubaneswar</div>
               </div>
               <div
-                class="relative overflow-hidden rounded-3xl border border-white/5 bg-zinc-950/40 backdrop-blur-xl transition-all duration-700 hover:border-white/20 p-8 md:p-12">
+                class="relative overflow-hidden rounded-2xl md:rounded-3xl border border-white/5 bg-zinc-950/40 backdrop-blur-xl transition-all duration-700 hover:border-white/20 p-6 md:p-12">
                 <div class="relative z-10">
-                  <h3 class="text-3xl md:text-4xl font-bold tracking-tighter text-white leading-none font-space mb-3">
+                  <h3
+                    class="text-2xl md:text-4xl font-bold tracking-tighter text-white leading-none font-space mb-2 md:mb-3">
                     Master of Computer Applications</h3>
-                  <p class="text-zinc-400 text-lg font-medium tracking-tight">Kalinga Institute of Industrial Technology
+                  <p class="text-zinc-400 text-base md:text-lg font-medium tracking-tight">Kalinga Institute of
+                    Industrial Technology
                   </p>
                   <p
-                    class="mt-4 inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-sm font-semibold text-zinc-300 border border-white/10">
+                    class="mt-4 inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-xs md:text-sm font-semibold text-zinc-300 border border-white/10">
                     CGPA: 8.24</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="relative mb-24 last:mb-0 group stair-step-up" style="animation-delay: 0.2s;">
+          <div class="relative mb-16 md:mb-24 last:mb-0 group stair-step-up pl-12 md:pl-0"
+            style="animation-delay: 0.1s;">
             <div
-              class="absolute left-0 md:left-[calc(-27px-4px)] top-10 z-20 hidden md:block h-2 w-2 rounded-full border border-white/20 bg-zinc-950 transition-all duration-500 group-hover:bg-white group-hover:scale-150 group-hover:border-white">
+              class="absolute left-[13px] md:left-[calc(-27px-4px)] top-8 md:top-10 z-20 block h-2 w-2 rounded-full border border-white/20 bg-zinc-950 transition-all duration-500 group-hover:bg-white md:group-hover:scale-150 group-hover:border-white">
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-8 items-start">
-              <div class="space-y-3 pt-2">
+            <div class="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-4 md:gap-8 items-start">
+              <div class="space-y-2 md:space-y-3 pt-1 md:pt-2">
                 <div
-                  class="flex items-center gap-2 text-zinc-400 font-bold uppercase tracking-[0.2em] text-[10px] opacity-50 group-hover:opacity-100 transition-opacity">
+                  class="flex items-center gap-2 text-zinc-400 font-bold uppercase tracking-[0.2em] text-[10px] opacity-100 md:opacity-50 md:group-hover:opacity-100 transition-opacity">
                   <i data-feather="calendar" class="w-3.5 h-3.5"></i>2022 — 2025
                 </div>
                 <div class="flex items-center gap-2 text-zinc-600 font-semibold text-[9px] uppercase tracking-widest"><i
                     data-feather="map-pin" class="w-3.5 h-3.5"></i>Kolkata, WB</div>
               </div>
               <div
-                class="relative overflow-hidden rounded-3xl border border-white/5 bg-zinc-950/40 backdrop-blur-xl transition-all duration-700 hover:border-white/20 p-8 md:p-12">
+                class="relative overflow-hidden rounded-2xl md:rounded-3xl border border-white/5 bg-zinc-950/40 backdrop-blur-xl transition-all duration-700 hover:border-white/20 p-6 md:p-12">
                 <div class="relative z-10">
-                  <h3 class="text-3xl md:text-4xl font-bold tracking-tighter text-white leading-none font-space mb-3">
+                  <h3
+                    class="text-2xl md:text-4xl font-bold tracking-tighter text-white leading-none font-space mb-2 md:mb-3">
                     Bachelor of Computer Applications</h3>
-                  <p class="text-zinc-400 text-lg font-medium tracking-tight">RCC Institute of Information Technology
+                  <p class="text-zinc-400 text-base md:text-lg font-medium tracking-tight">RCC Institute of Information
+                    Technology
                   </p>
                   <p
-                    class="mt-4 inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-sm font-semibold text-zinc-300 border border-white/10">
+                    class="mt-4 inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-xs md:text-sm font-semibold text-zinc-300 border border-white/10">
                     CGPA: 8.07</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="relative mb-24 last:mb-0 group stair-step-up" style="animation-delay: 0.4s;">
+          <div class="relative mb-16 md:mb-24 last:mb-0 group stair-step-up pl-12 md:pl-0"
+            style="animation-delay: 0.2s;">
             <div
-              class="absolute left-0 md:left-[calc(-27px-4px)] top-10 z-20 hidden md:block h-2 w-2 rounded-full border border-white/20 bg-zinc-950 transition-all duration-500 group-hover:bg-white group-hover:scale-150 group-hover:border-white">
+              class="absolute left-[13px] md:left-[calc(-27px-4px)] top-8 md:top-10 z-20 block h-2 w-2 rounded-full border border-white/20 bg-zinc-950 transition-all duration-500 group-hover:bg-white md:group-hover:scale-150 group-hover:border-white">
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-8 items-start">
-              <div class="space-y-3 pt-2">
+            <div class="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-4 md:gap-8 items-start">
+              <div class="space-y-2 md:space-y-3 pt-1 md:pt-2">
                 <div
-                  class="flex items-center gap-2 text-zinc-400 font-bold uppercase tracking-[0.2em] text-[10px] opacity-50 group-hover:opacity-100 transition-opacity">
+                  class="flex items-center gap-2 text-zinc-400 font-bold uppercase tracking-[0.2em] text-[10px] opacity-100 md:opacity-50 md:group-hover:opacity-100 transition-opacity">
                   <i data-feather="calendar" class="w-3.5 h-3.5"></i>2019 — 2021
                 </div>
                 <div class="flex items-center gap-2 text-zinc-600 font-semibold text-[9px] uppercase tracking-widest"><i
                     data-feather="map-pin" class="w-3.5 h-3.5"></i>Kolkata, WB</div>
               </div>
               <div
-                class="relative overflow-hidden rounded-3xl border border-white/5 bg-zinc-950/40 backdrop-blur-xl transition-all duration-700 hover:border-white/20 p-8 md:p-12">
+                class="relative overflow-hidden rounded-2xl md:rounded-3xl border border-white/5 bg-zinc-950/40 backdrop-blur-xl transition-all duration-700 hover:border-white/20 p-6 md:p-12">
                 <div class="relative z-10">
-                  <h3 class="text-2xl md:text-3xl font-bold tracking-tighter text-white leading-none font-space mb-3">
-                    Higher Secondary (Science) WBCHSE</h3>
-                  <p class="text-zinc-400 text-lg font-medium tracking-tight">Baranagar Narendranath Vidyamandir</p>
+                  <h3
+                    class="text-2xl md:text-3xl font-bold tracking-tighter text-white leading-none font-space mb-2 md:mb-3">
+                    Higher Secondary (Science)</h3>
+                  <p class="text-zinc-400 text-base md:text-lg font-medium tracking-tight">Baranagar Narendranath
+                    Vidyamandir</p>
                   <p
-                    class="mt-4 inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-sm font-semibold text-zinc-300 border border-white/10">
+                    class="mt-4 inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-xs md:text-sm font-semibold text-zinc-300 border border-white/10">
                     Percentage: 87.4%</p>
                 </div>
               </div>
@@ -286,128 +305,129 @@
       </div>
     </section>
 
-    <section id="skills" class="relative bg-white py-32 overflow-hidden">
-      <div class="container relative z-10 mx-auto px-6 max-w-6xl">
-        <div class="mb-20 fade-in-up">
-          <h2 class="text-5xl md:text-6xl font-black tracking-tighter text-black mb-6 font-space">Skills</h2>
-          <p class="text-zinc-600 text-xl max-w-lg leading-relaxed font-medium">Technical proficiencies in building
+    <section id="skills" class="relative bg-white py-20 md:py-32 overflow-hidden scroll-mt-10">
+      <div class="container relative z-10 mx-auto px-5 md:px-6 max-w-6xl">
+        <div class="mb-12 md:mb-20 fade-in-up">
+          <h2 class="text-4xl md:text-6xl font-black tracking-tighter text-black mb-4 md:mb-6 font-space">Skills</h2>
+          <p class="text-zinc-600 text-lg md:text-xl max-w-lg leading-relaxed font-medium">Technical proficiencies in
+            building
             scalable systems and interactive interfaces.</p>
         </div>
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+
           <div
-            class="spotlight-card dark-spotlight group relative overflow-hidden rounded-[23px] bg-zinc-50 p-8 border border-black/10 hover:border-black/20 transition-all lg:col-span-1 fade-in-up">
+            class="spotlight-card dark-spotlight group relative overflow-hidden rounded-[1.5rem] md:rounded-[23px] bg-zinc-50 p-6 md:p-8 border border-black/10 hover:border-black/20 transition-all lg:col-span-1 fade-in-up">
             <div class="relative z-10">
               <div class="flex items-center gap-4 mb-6">
                 <div
-                  class="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-white shadow-sm transition-transform group-hover:scale-110 duration-300">
-                  <i data-feather="code" class="text-black w-5 h-5"></i>
+                  class="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-xl md:rounded-2xl border border-black/10 bg-white shadow-sm transition-transform group-hover:scale-110 duration-300">
+                  <i data-feather="code" class="text-black w-4 h-4 md:w-5 md:h-5"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-black tracking-tight">Languages</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-black tracking-tight">Languages</h3>
               </div>
             </div>
-            <div class="relative z-10 flex flex-wrap gap-2 mt-10">
+            <div class="relative z-10 flex flex-wrap gap-2 mt-6 md:mt-10">
               <div
                 class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
-                <img src="https://cdn.simpleicons.org/openjdk/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
-                  alt="Java">
+                <img src="https://cdn.simpleicons.org/openjdk/000000"
+                  class="h-3 w-3 md:h-4 md:w-4 opacity-70 group-hover:opacity-100" alt="Java">
                 <span
-                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Java</span>
+                  class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Java</span>
               </div>
               <div
                 class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
-                <img src="https://cdn.simpleicons.org/python/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
-                  alt="Python">
+                <img src="https://cdn.simpleicons.org/python/000000"
+                  class="h-3 w-3 md:h-4 md:w-4 opacity-70 group-hover:opacity-100" alt="Python">
                 <span
-                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Python</span>
+                  class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Python</span>
               </div>
             </div>
           </div>
 
           <div
-            class="spotlight-card dark-spotlight group relative overflow-hidden rounded-[23px] bg-zinc-50 p-8 border border-black/10 hover:border-black/20 transition-all lg:col-span-2 fade-in-up"
+            class="spotlight-card dark-spotlight group relative overflow-hidden rounded-[1.5rem] md:rounded-[23px] bg-zinc-50 p-6 md:p-8 border border-black/10 hover:border-black/20 transition-all lg:col-span-2 fade-in-up"
             style="animation-delay: 0.1s;">
             <div class="relative z-10">
               <div class="flex items-center gap-4 mb-6">
                 <div
-                  class="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-white shadow-sm transition-transform group-hover:scale-110 duration-300">
-                  <i data-feather="layout" class="text-black w-5 h-5"></i>
+                  class="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-xl md:rounded-2xl border border-black/10 bg-white shadow-sm transition-transform group-hover:scale-110 duration-300">
+                  <i data-feather="layout" class="text-black w-4 h-4 md:w-5 md:h-5"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-black tracking-tight">Frontend</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-black tracking-tight">Frontend</h3>
               </div>
             </div>
-            <div class="relative z-10 flex flex-wrap gap-2 mt-10">
+            <div class="relative z-10 flex flex-wrap gap-2 mt-6 md:mt-10">
               <div
                 class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
-                <img src="https://cdn.simpleicons.org/html5/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
-                  alt="HTML5">
+                <img src="https://cdn.simpleicons.org/html5/000000"
+                  class="h-3 w-3 md:h-4 md:w-4 opacity-70 group-hover:opacity-100" alt="HTML5">
                 <span
-                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">HTML5</span>
+                  class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">HTML5</span>
               </div>
               <div
                 class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
-                <img src="https://cdn.simpleicons.org/css/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
-                  alt="CSS3">
+                <img src="https://cdn.simpleicons.org/css/000000"
+                  class="h-3 w-3 md:h-4 md:w-4 opacity-70 group-hover:opacity-100" alt="CSS3">
                 <span
-                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">CSS</span>
+                  class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">CSS</span>
               </div>
               <div
                 class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
                 <img src="https://cdn.simpleicons.org/tailwindcss/000000"
-                  class="h-4 w-4 opacity-70 group-hover:opacity-100" alt="Tailwind">
+                  class="h-3 w-3 md:h-4 md:w-4 opacity-70 group-hover:opacity-100" alt="Tailwind">
                 <span
-                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Tailwind
-                  CSS</span>
+                  class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Tailwind</span>
               </div>
             </div>
           </div>
 
           <div
-            class="spotlight-card dark-spotlight group relative overflow-hidden rounded-[23px] bg-zinc-50 p-8 border border-black/10 hover:border-black/20 transition-all lg:col-span-3 fade-in-up"
+            class="spotlight-card dark-spotlight group relative overflow-hidden rounded-[1.5rem] md:rounded-[23px] bg-zinc-50 p-6 md:p-8 border border-black/10 hover:border-black/20 transition-all lg:col-span-3 fade-in-up"
             style="animation-delay: 0.2s;">
             <div class="relative z-10">
               <div class="flex items-center gap-4 mb-6">
                 <div
-                  class="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-white shadow-sm transition-transform group-hover:scale-110 duration-300">
-                  <i data-feather="tool" class="text-black w-5 h-5"></i>
+                  class="flex h-10 w-10 md:h-12 md:w-12 items-center justify-center rounded-xl md:rounded-2xl border border-black/10 bg-white shadow-sm transition-transform group-hover:scale-110 duration-300">
+                  <i data-feather="tool" class="text-black w-4 h-4 md:w-5 md:h-5"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-black tracking-tight">Systems, Deployment & Tools</h3>
+                <h3 class="text-xl md:text-2xl font-bold text-black tracking-tight">Systems, Deployment & Tools</h3>
               </div>
             </div>
-            <div class="relative z-10 flex flex-wrap gap-2 mt-10">
+            <div class="relative z-10 flex flex-wrap gap-2 mt-6 md:mt-10">
               <div
                 class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
-                <img src="https://cdn.simpleicons.org/linux/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
-                  alt="Linux">
+                <img src="https://cdn.simpleicons.org/linux/000000"
+                  class="h-3 w-3 md:h-4 md:w-4 opacity-70 group-hover:opacity-100" alt="Linux">
                 <span
-                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">GNU/Linux</span>
+                  class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">GNU/Linux</span>
               </div>
               <div
                 class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
-                <img src="https://cdn.simpleicons.org/git/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
-                  alt="Git">
-                <span class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Git &
-                  GitHub</span>
+                <img src="https://cdn.simpleicons.org/git/000000"
+                  class="h-3 w-3 md:h-4 md:w-4 opacity-70 group-hover:opacity-100" alt="Git">
+                <span
+                  class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Git/GitHub</span>
               </div>
               <div
                 class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
-                <img src="https://cdn.simpleicons.org/vercel/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
-                  alt="Vercel">
+                <img src="https://cdn.simpleicons.org/vercel/000000"
+                  class="h-3 w-3 md:h-4 md:w-4 opacity-70 group-hover:opacity-100" alt="Vercel">
                 <span
-                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Vercel</span>
+                  class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Vercel</span>
               </div>
               <div
                 class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
-                <img src="https://cdn.simpleicons.org/netlify/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
-                  alt="Netlify">
+                <img src="https://cdn.simpleicons.org/netlify/000000"
+                  class="h-3 w-3 md:h-4 md:w-4 opacity-70 group-hover:opacity-100" alt="Netlify">
                 <span
-                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Netlify</span>
+                  class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Netlify</span>
               </div>
               <div
                 class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
-                <img src="https://cdn.simpleicons.org/vim/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
-                  alt="Vim">
+                <img src="https://cdn.simpleicons.org/vim/000000"
+                  class="h-3 w-3 md:h-4 md:w-4 opacity-70 group-hover:opacity-100" alt="Vim">
                 <span
-                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Vim</span>
+                  class="text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Vim</span>
               </div>
             </div>
           </div>
@@ -415,74 +435,77 @@
       </div>
     </section>
 
-    <section id="certificates" class="relative py-40 bg-black overflow-hidden scroll-mt-20">
-      <div class="max-w-7xl mx-auto px-6 relative z-10">
-        <header class="mb-24 space-y-4 fade-in-up">
-          <h2 class="text-5xl md:text-6xl font-black tracking-tighter text-white font-space">Certificates</h2>
+    <section id="certificates" class="relative py-20 md:py-40 bg-black overflow-hidden scroll-mt-10">
+      <div class="max-w-7xl mx-auto px-5 md:px-6 relative z-10">
+        <header class="mb-12 md:mb-24 space-y-4 fade-in-up">
+          <h2 class="text-4xl md:text-6xl font-black tracking-tighter text-white font-space">Certificates</h2>
         </header>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           <div
-            class="spotlight-card group relative flex flex-col justify-between overflow-hidden rounded-[2.5rem] border border-white/5 bg-zinc-900/20 backdrop-blur-md p-8 transition-all duration-500 hover:border-white/20 hover:bg-zinc-900/40 fade-in-up">
+            class="spotlight-card group relative flex flex-col justify-between overflow-hidden rounded-[2rem] border border-white/5 bg-zinc-900/20 backdrop-blur-md p-6 md:p-8 transition-all duration-500 hover:border-white/20 hover:bg-zinc-900/40 fade-in-up">
             <div class="relative z-10">
-              <div class="flex items-center justify-between mb-10">
+              <div class="flex items-center justify-between mb-8 md:mb-10">
                 <div
-                  class="w-14 h-14 flex items-center justify-center rounded-2xl bg-zinc-900 border border-white/10 text-zinc-400 group-hover:scale-110 group-hover:text-[#4285F4] transition-all shadow-xl">
-                  <i data-feather="award" class="w-6 h-6"></i>
+                  class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-2xl bg-zinc-900 border border-white/10 text-zinc-400 group-hover:scale-110 group-hover:text-[#4285F4] transition-all shadow-xl">
+                  <i data-feather="award" class="w-5 h-5 md:w-6 md:h-6"></i>
                 </div>
               </div>
-              <div class="space-y-4">
+              <div class="space-y-3 md:space-y-4">
                 <div class="flex items-center gap-3">
                   <span
                     class="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[9px] font-bold uppercase tracking-widest text-zinc-500">Coursera</span>
-                  <div class="h-px w-8 bg-white/10"></div>
+                  <div class="h-px w-6 md:w-8 bg-white/10"></div>
                   <span class="text-[9px] font-bold uppercase tracking-widest text-zinc-600">April 2024</span>
                 </div>
-                <h3 class="text-2xl font-bold tracking-tight text-white font-space">Google Python Crash Course</h3>
+                <h3 class="text-xl md:text-2xl font-bold tracking-tight text-white font-space">Google Python Crash
+                  Course</h3>
               </div>
             </div>
           </div>
 
           <div
-            class="spotlight-card group relative flex flex-col justify-between overflow-hidden rounded-[2.5rem] border border-white/5 bg-zinc-900/20 backdrop-blur-md p-8 transition-all duration-500 hover:border-white/20 hover:bg-zinc-900/40 fade-in-up"
+            class="spotlight-card group relative flex flex-col justify-between overflow-hidden rounded-[2rem] border border-white/5 bg-zinc-900/20 backdrop-blur-md p-6 md:p-8 transition-all duration-500 hover:border-white/20 hover:bg-zinc-900/40 fade-in-up"
             style="animation-delay: 0.1s;">
             <div class="relative z-10">
-              <div class="flex items-center justify-between mb-10">
+              <div class="flex items-center justify-between mb-8 md:mb-10">
                 <div
-                  class="w-14 h-14 flex items-center justify-center rounded-2xl bg-zinc-900 border border-white/10 text-zinc-400 group-hover:scale-110 group-hover:text-[#2EC866] transition-all shadow-xl">
-                  <i data-feather="award" class="w-6 h-6"></i>
+                  class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-2xl bg-zinc-900 border border-white/10 text-zinc-400 group-hover:scale-110 group-hover:text-[#2EC866] transition-all shadow-xl">
+                  <i data-feather="award" class="w-5 h-5 md:w-6 md:h-6"></i>
                 </div>
               </div>
-              <div class="space-y-4">
+              <div class="space-y-3 md:space-y-4">
                 <div class="flex items-center gap-3">
                   <span
                     class="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[9px] font-bold uppercase tracking-widest text-zinc-500">HackerRank</span>
-                  <div class="h-px w-8 bg-white/10"></div>
+                  <div class="h-px w-6 md:w-8 bg-white/10"></div>
                   <span class="text-[9px] font-bold uppercase tracking-widest text-zinc-600">June 2024</span>
                 </div>
-                <h3 class="text-2xl font-bold tracking-tight text-white font-space">SQL (Basic) Certificate</h3>
+                <h3 class="text-xl md:text-2xl font-bold tracking-tight text-white font-space">SQL (Basic) Certificate
+                </h3>
               </div>
             </div>
           </div>
 
           <div
-            class="spotlight-card group relative flex flex-col justify-between overflow-hidden rounded-[2.5rem] border border-white/5 bg-zinc-900/20 backdrop-blur-md p-8 transition-all duration-500 hover:border-white/20 hover:bg-zinc-900/40 fade-in-up"
+            class="spotlight-card group relative flex flex-col justify-between overflow-hidden rounded-[2rem] border border-white/5 bg-zinc-900/20 backdrop-blur-md p-6 md:p-8 transition-all duration-500 hover:border-white/20 hover:bg-zinc-900/40 fade-in-up"
             style="animation-delay: 0.2s;">
             <div class="relative z-10">
-              <div class="flex items-center justify-between mb-10">
+              <div class="flex items-center justify-between mb-8 md:mb-10">
                 <div
-                  class="w-14 h-14 flex items-center justify-center rounded-2xl bg-zinc-900 border border-white/10 text-zinc-400 group-hover:scale-110 group-hover:text-[#38BDF8] transition-all shadow-xl">
-                  <i data-feather="award" class="w-6 h-6"></i>
+                  class="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-2xl bg-zinc-900 border border-white/10 text-zinc-400 group-hover:scale-110 group-hover:text-[#38BDF8] transition-all shadow-xl">
+                  <i data-feather="award" class="w-5 h-5 md:w-6 md:h-6"></i>
                 </div>
               </div>
-              <div class="space-y-4">
+              <div class="space-y-3 md:space-y-4">
                 <div class="flex items-center gap-3">
                   <span
                     class="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[9px] font-bold uppercase tracking-widest text-zinc-500">HackerRank</span>
-                  <div class="h-px w-8 bg-white/10"></div>
+                  <div class="h-px w-6 md:w-8 bg-white/10"></div>
                   <span class="text-[9px] font-bold uppercase tracking-widest text-zinc-600">Dec 2024</span>
                 </div>
-                <h3 class="text-2xl font-bold tracking-tight text-white font-space">CSS (Basic) Certificate</h3>
+                <h3 class="text-xl md:text-2xl font-bold tracking-tight text-white font-space">CSS (Basic) Certificate
+                </h3>
               </div>
             </div>
           </div>
@@ -490,38 +513,38 @@
       </div>
     </section>
 
-    <section id="projects" class="py-32 px-6 bg-white font-space overflow-hidden">
+    <section id="projects" class="py-20 md:py-32 px-5 md:px-6 bg-white font-space overflow-hidden scroll-mt-10">
       <div class="max-w-7xl mx-auto fade-in-up">
-        <div class="mb-20 border-l border-black pl-6">
-          <h2 class="text-5xl md:text-6xl font-bold text-black tracking-tighter leading-none">Projects</h2>
+        <div class="mb-12 md:mb-20 border-l-[3px] border-black pl-5 md:pl-6">
+          <h2 class="text-4xl md:text-6xl font-bold text-black tracking-tighter leading-none">Projects</h2>
         </div>
 
         <div class="grid grid-cols-1 gap-8">
           <div
-            class="spotlight-card dark-spotlight group relative overflow-hidden rounded-[2.5rem] border border-black/10 bg-zinc-50 p-8 md:p-12 transition-all duration-500 hover:border-black/20 hover:shadow-lg">
-            <div class="relative z-10 flex flex-col md:flex-row gap-8 justify-between">
-              <div class="flex flex-col gap-4 max-w-2xl">
-                <div class="flex gap-2">
+            class="spotlight-card dark-spotlight group relative overflow-hidden rounded-[2rem] md:rounded-[2.5rem] border border-black/10 bg-zinc-50 p-6 md:p-12 transition-all duration-500 hover:border-black/20 hover:shadow-lg">
+            <div class="relative z-10 flex flex-col md:flex-row gap-6 md:gap-8 justify-between">
+              <div class="flex flex-col gap-3 md:gap-4 max-w-2xl">
+                <div class="flex flex-wrap gap-2">
                   <span
-                    class="px-3 py-1 rounded-full bg-black/5 border border-black/10 text-xs font-bold text-zinc-700">HTML</span>
+                    class="px-3 py-1 rounded-full bg-black/5 border border-black/10 text-[10px] md:text-xs font-bold text-zinc-700">HTML</span>
                   <span
-                    class="px-3 py-1 rounded-full bg-black/5 border border-black/10 text-xs font-bold text-zinc-700">CSS</span>
+                    class="px-3 py-1 rounded-full bg-black/5 border border-black/10 text-[10px] md:text-xs font-bold text-zinc-700">CSS</span>
                   <span
-                    class="px-3 py-1 rounded-full bg-black/5 border border-black/10 text-xs font-bold text-zinc-700">Netlify</span>
+                    class="px-3 py-1 rounded-full bg-black/5 border border-black/10 text-[10px] md:text-xs font-bold text-zinc-700">Netlify</span>
                 </div>
-                <h3 class="text-3xl md:text-4xl font-bold text-black">K{devs}</h3>
-                <p class="text-zinc-500 font-medium tracking-widest text-sm uppercase">Coding Club Registration Website
-                </p>
-                <p class="text-zinc-600 leading-relaxed mt-4">
+                <h3 class="text-2xl md:text-4xl font-bold text-black mt-2">K{devs}</h3>
+                <p class="text-zinc-500 font-medium tracking-widest text-[10px] md:text-sm uppercase">Coding Club
+                  Registration</p>
+                <p class="text-zinc-600 text-sm md:text-base leading-relaxed mt-2 md:mt-4">
                   Developed a website to centralize coding club resources and event updates, which resolved low student
                   engagement and streamlined the member recruitment process. Student engagement increased by 20%.
                 </p>
               </div>
-              <div class="flex items-start md:justify-end">
+              <div class="flex items-start md:justify-end mt-2 md:mt-0">
                 <a href="https://kodingclub.netlify.app/" target="_blank"
-                  class="flex h-14 w-14 items-center justify-center rounded-full bg-black text-white hover:bg-zinc-800 transition-all hover:scale-110 shadow-md"
+                  class="flex h-12 w-12 md:h-14 md:w-14 items-center justify-center rounded-full bg-black text-white hover:bg-zinc-800 transition-all hover:scale-110 shadow-md"
                   data-magnetic>
-                  <i data-feather="arrow-up-right" class="w-6 h-6"></i>
+                  <i data-feather="arrow-up-right" class="w-5 h-5 md:w-6 md:h-6"></i>
                 </a>
               </div>
             </div>
@@ -530,93 +553,98 @@
       </div>
     </section>
 
-    <section id="contact" class="relative py-32 px-6 bg-black scroll-mt-20 font-space">
+    <section id="contact" class="relative py-20 md:py-32 px-5 md:px-6 bg-black scroll-mt-10 font-space">
       <div class="max-w-7xl mx-auto relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start" id="contact-content">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-start" id="contact-content">
 
           <div class="flex flex-col fade-in-up">
-            <h2 class="text-5xl md:text-6xl font-bold text-white mb-8 tracking-tighter leading-none">Get In Touch</h2>
-            <p class="text-zinc-500 text-xl mb-12 max-w-md leading-relaxed">Let's build something magnificent.</p>
+            <h2 class="text-4xl md:text-6xl font-bold text-white mb-4 md:mb-8 tracking-tighter leading-none">Get In
+              Touch</h2>
+            <p class="text-zinc-500 text-lg md:text-xl mb-10 md:mb-12 max-w-md leading-relaxed">Let's build something
+              magnificent.</p>
 
-            <div class="space-y-8 mb-12">
+            <div class="space-y-6 md:space-y-8 mb-10 md:mb-12">
               <a href="mailto:sattwik211@gmail.com" class="block w-fit group">
-                <div class="flex items-center gap-6">
+                <div class="flex items-center gap-4 md:gap-6">
                   <div
-                    class="w-12 h-12 flex items-center justify-center border border-white/10 text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
-                    <i data-feather="mail" class="w-5 h-5"></i>
+                    class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center border border-white/10 text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
+                    <i data-feather="mail" class="w-4 h-4 md:w-5 md:h-5"></i>
                   </div>
                   <div>
-                    <p class="text-zinc-500 text-[10px] uppercase tracking-[0.3em] font-bold mb-1">Email</p>
-                    <p class="text-white text-lg font-medium">sattwik211@gmail.com</p>
+                    <p class="text-zinc-500 text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold mb-1">Email
+                    </p>
+                    <p class="text-white text-base md:text-lg font-medium break-all">sattwik211@gmail.com</p>
                   </div>
                 </div>
               </a>
 
               <a href="tel:+916289073480" class="block w-fit group">
-                <div class="flex items-center gap-6">
+                <div class="flex items-center gap-4 md:gap-6">
                   <div
-                    class="w-12 h-12 flex items-center justify-center border border-white/10 text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
-                    <i data-feather="phone" class="w-5 h-5"></i>
+                    class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center border border-white/10 text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
+                    <i data-feather="phone" class="w-4 h-4 md:w-5 md:h-5"></i>
                   </div>
                   <div>
-                    <p class="text-zinc-500 text-[10px] uppercase tracking-[0.3em] font-bold mb-1">Phone</p>
-                    <p class="text-white text-lg font-medium">+91 6289073480</p>
+                    <p class="text-zinc-500 text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold mb-1">Phone
+                    </p>
+                    <p class="text-white text-base md:text-lg font-medium">+91 6289073480</p>
                   </div>
                 </div>
               </a>
 
-              <div class="flex items-center gap-6 group">
+              <div class="flex items-center gap-4 md:gap-6 group">
                 <div
-                  class="w-12 h-12 flex items-center justify-center border border-white/10 text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
-                  <i data-feather="map-pin" class="w-5 h-5"></i>
+                  class="w-10 h-10 md:w-12 md:h-12 flex items-center justify-center border border-white/10 text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
+                  <i data-feather="map-pin" class="w-4 h-4 md:w-5 md:h-5"></i>
                 </div>
                 <div>
-                  <p class="text-zinc-500 text-[10px] uppercase tracking-[0.3em] font-bold mb-1">Location</p>
-                  <p class="text-white text-lg font-medium">Kolkata, West Bengal</p>
+                  <p class="text-zinc-500 text-[9px] md:text-[10px] uppercase tracking-[0.3em] font-bold mb-1">Location
+                  </p>
+                  <p class="text-white text-base md:text-lg font-medium">Kolkata, West Bengal</p>
                 </div>
               </div>
             </div>
 
             <div class="flex gap-4">
-              <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
-                class="w-12 h-12 flex items-center justify-center border border-white/10 text-zinc-400 hover:text-white hover:border-white transition-all transform hover:-translate-y-0.5">
+              <a href="https://github.com/sattwik742" target="_blank" rel="noopener noreferrer"
+                class="w-12 h-12 flex items-center justify-center border border-white/10 text-zinc-400 hover:text-white hover:border-white transition-all transform hover:-translate-y-0.5 active:scale-95">
                 <i data-feather="github" class="w-5 h-5"></i>
               </a>
               <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
-                class="w-12 h-12 flex items-center justify-center border border-white/10 text-zinc-400 hover:text-white hover:border-white transition-all transform hover:-translate-y-0.5">
+                class="w-12 h-12 flex items-center justify-center border border-white/10 text-zinc-400 hover:text-white hover:border-white transition-all transform hover:-translate-y-0.5 active:scale-95">
                 <i data-feather="linkedin" class="w-5 h-5"></i>
               </a>
             </div>
           </div>
 
           <div class="relative fade-in-up" style="animation-delay: 0.1s;">
-            <div class="relative bg-zinc-950 border border-white/10 p-8 md:p-12 shadow-2xl">
-              <form id="contactForm" class="space-y-10">
-                <div class="grid grid-cols-1 gap-10">
+            <div class="relative bg-zinc-950 border border-white/10 p-6 md:p-12 shadow-2xl">
+              <form id="contactForm" class="space-y-8 md:space-y-10">
+                <div class="grid grid-cols-1 gap-8 md:gap-10">
                   <div class="relative group">
                     <label for="name"
-                      class="text-zinc-500 text-xs font-bold uppercase tracking-[0.2em] mb-2 block transition-colors group-focus-within:text-white">Full
+                      class="text-zinc-500 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] mb-2 block transition-colors group-focus-within:text-white">Full
                       Name</label>
                     <input id="name" name="name" required placeholder="NAME"
-                      class="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder:text-zinc-800 focus:border-white outline-none transition-all">
+                      class="w-full bg-transparent border-b border-white/20 py-2 md:py-3 text-white placeholder:text-zinc-800 focus:border-white outline-none transition-all text-sm md:text-base rounded-none">
                   </div>
                   <div class="relative group">
                     <label for="email"
-                      class="text-zinc-500 text-xs font-bold uppercase tracking-[0.2em] mb-2 block transition-colors group-focus-within:text-white">Email
+                      class="text-zinc-500 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] mb-2 block transition-colors group-focus-within:text-white">Email
                       Address</label>
                     <input id="email" type="email" name="email" required placeholder="EMAIL@DOMAIN.COM"
-                      class="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder:text-zinc-800 focus:border-white outline-none transition-all">
+                      class="w-full bg-transparent border-b border-white/20 py-2 md:py-3 text-white placeholder:text-zinc-800 focus:border-white outline-none transition-all text-sm md:text-base rounded-none">
                   </div>
                 </div>
                 <div class="relative group">
                   <label for="message"
-                    class="text-zinc-500 text-xs font-bold uppercase tracking-[0.2em] mb-2 block transition-colors group-focus-within:text-white">Your
+                    class="text-zinc-500 text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] mb-2 block transition-colors group-focus-within:text-white">Your
                     Message</label>
                   <textarea id="message" name="message" required rows="4" placeholder="DESCRIBE YOUR PROJECT"
-                    class="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder:text-zinc-800 focus:border-white outline-none transition-all resize-none"></textarea>
+                    class="w-full bg-transparent border-b border-white/20 py-2 md:py-3 text-white placeholder:text-zinc-800 focus:border-white outline-none transition-all resize-none text-sm md:text-base rounded-none"></textarea>
                 </div>
                 <button type="submit" id="submitBtn"
-                  class="w-full bg-white text-black font-bold py-6 uppercase tracking-[0.3em] flex items-center justify-center gap-3 hover:bg-zinc-200 transition-colors active:scale-95 disabled:opacity-50">
+                  class="w-full bg-white text-black font-bold py-4 md:py-6 text-sm uppercase tracking-[0.3em] flex items-center justify-center gap-3 hover:bg-zinc-200 transition-colors active:scale-95 disabled:opacity-50">
                   <span id="btnText">Send Message</span>
                   <i data-feather="arrow-right" id="btnIcon" class="w-4 h-4"></i>
                   <i data-feather="loader" id="btnLoader" class="w-5 h-5 animate-spin hidden"></i>
@@ -627,33 +655,36 @@
         </div>
 
         <div id="success-message"
-          class="hidden flex-col items-center justify-center text-center p-12 border border-white/10 bg-zinc-950 max-w-md w-full mx-auto min-h-[400px]">
-          <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-8">
-            <i data-feather="check-circle" class="text-black w-10 h-10"></i>
+          class="hidden flex-col items-center justify-center text-center p-8 md:p-12 border border-white/10 bg-zinc-950 max-w-md w-full mx-auto min-h-[300px] md:min-h-[400px]">
+          <div
+            class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-6 md:mb-8">
+            <i data-feather="check-circle" class="text-black w-8 h-8 md:w-10 md:h-10"></i>
           </div>
-          <h2 class="text-4xl font-bold text-white mb-4 tracking-tighter uppercase">Confirmed</h2>
-          <p class="text-zinc-400 text-lg leading-relaxed">Your message has been received. Expect a response shortly.
-          </p>
+          <h2 class="text-2xl md:text-4xl font-bold text-white mb-3 md:mb-4 tracking-tighter uppercase">Confirmed</h2>
+          <p class="text-zinc-400 text-sm md:text-lg leading-relaxed">Your message has been received. Expect a response
+            shortly.</p>
           <button id="resetFormBtn"
-            class="mt-10 w-full py-4 text-white border border-white transition-colors font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-black">Send
+            class="mt-8 md:mt-10 w-full py-3 md:py-4 text-white border border-white transition-colors font-bold uppercase tracking-widest text-xs md:text-sm hover:bg-white hover:text-black">Send
             Another</button>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-white/10 bg-black py-12 px-4 md:px-6">
+  <footer class="border-t border-white/10 bg-black py-10 px-5 md:px-6">
     <div class="max-w-7xl mx-auto">
-      <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
-        <p class="text-zinc-500 text-xs font-sans">
+      <div class="pt-6 flex flex-col-reverse md:flex-row justify-between items-center gap-6">
+        <p class="text-zinc-500 text-xs font-sans text-center md:text-left">
           © <span id="current-year"></span> Sattwik Sinha Mahapatra. All rights reserved.
         </p>
 
-        <div class="flex items-center gap-5">
-          <a href="https://github.com/" target="_blank" class="text-zinc-400 hover:text-white transition-colors">
+        <div class="flex items-center gap-6">
+          <a href="https://github.com/sattwik742" target="_blank"
+            class="text-zinc-400 hover:text-white transition-colors p-2 md:p-0 active:scale-95">
             <i data-feather="github" class="w-5 h-5"></i>
           </a>
-          <a href="https://linkedin.com/" target="_blank" class="text-zinc-400 hover:text-white transition-colors">
+          <a href="https://linkedin.com/" target="_blank"
+            class="text-zinc-400 hover:text-white transition-colors p-2 md:p-0 active:scale-95">
             <i data-feather="linkedin" class="w-5 h-5"></i>
           </a>
         </div>

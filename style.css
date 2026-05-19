@@ -12,8 +12,11 @@
     border-radius: 9999px;
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: rgba(100, 100, 100, 0.8);
+/* Fix sticky hovers on touch devices */
+@media (hover: hover) and (pointer: fine) {
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(100, 100, 100, 0.8);
+    }
 }
 
 /* Hide system cursor on desktop */
@@ -31,13 +34,14 @@
 .glass-nav {
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-color: rgba(255, 255, 255, 0.1);
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
 }
 
 .mask-marquee {
-    -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
-    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 /* Spotlight Effect Base */
@@ -46,7 +50,7 @@
     position: absolute;
     inset: -1px;
     border-radius: inherit;
-    background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y), rgba(255, 255, 255, 0.1), transparent 40%);
+    background: radial-gradient(500px circle at var(--mouse-x, -500px) var(--mouse-y, -500px), rgba(255, 255, 255, 0.1), transparent 40%);
     opacity: 0;
     transition: opacity 0.5s;
     pointer-events: none;
@@ -55,11 +59,13 @@
 
 /* Spotlight Effect for Light Mode Sections */
 .spotlight-card.dark-spotlight::before {
-    background: radial-gradient(500px circle at var(--mouse-x) var(--mouse-y), rgba(0, 0, 0, 0.05), transparent 40%);
+    background: radial-gradient(500px circle at var(--mouse-x, -500px) var(--mouse-y, -500px), rgba(0, 0, 0, 0.05), transparent 40%);
 }
 
-.spotlight-card:hover::before {
-    opacity: 1;
+@media (hover: hover) {
+    .spotlight-card:hover::before {
+        opacity: 1;
+    }
 }
 
 /* Base Entrance Animations */
@@ -67,6 +73,13 @@
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Shorter translation for mobile to prevent jank */
+@media (max-width: 768px) {
+    .fade-in-up {
+        transform: translateY(15px);
+    }
 }
 
 .fade-in-up.visible {
@@ -89,10 +102,16 @@
 }
 
 .stair-bar {
-    width: 10px;
+    width: 8px;
     background-color: #3b82f6;
     border-radius: 2px;
     animation: stairBounce 1.2s infinite ease-in-out alternate;
+}
+
+@media (min-width: 768px) {
+    .stair-bar {
+        width: 10px;
+    }
 }
 
 .stair-bar:nth-child(1) {
@@ -133,8 +152,13 @@
 .stair-step-up {
     opacity: 0;
     transform: translate(-30px, 40px);
-    /* Creates the diagonal stair movement */
     transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@media (max-width: 768px) {
+    .stair-step-up {
+        transform: translate(-10px, 20px);
+    }
 }
 
 .stair-step-up.visible {
