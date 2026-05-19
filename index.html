@@ -4,20 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sattwik | Portfolio</title>
-  <meta name="description" content="Crafting high-performance web experiences">
+  <title>Sattwik Sinha Mahapatra | Portfolio</title>
+  <meta name="description" content="Aspiring Web Developer & MCA Student">
 
-  <!-- fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
     rel="stylesheet">
 
-  <!-- icons -->
   <script src="https://unpkg.com/feather-icons"></script>
 
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -33,7 +30,6 @@
           },
           animation: {
             'marquee': 'marquee 25s linear infinite',
-            'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
           },
           keyframes: {
             marquee: {
@@ -46,11 +42,10 @@
     }
   </script>
 
-  <!-- CSS Import -->
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="antialiased selection:bg-blue-500 selection:text-white">
+<body class="antialiased selection:bg-blue-500 selection:text-white bg-black">
 
   <div id="cursor-ring"
     class="fixed top-0 left-0 w-8 h-8 border border-white rounded-full mix-blend-difference pointer-events-none z-[9999] hidden lg:flex items-center justify-center transition-[width,height] duration-300 ease-out"
@@ -59,7 +54,6 @@
     class="fixed top-0 left-0 w-1.5 h-1.5 bg-white rounded-full mix-blend-difference pointer-events-none z-[9999] hidden lg:block transition-transform duration-150"
     style="transform: translate(-50%, -50%);"></div>
 
-  <!-- Navbar -->
   <nav class="fixed top-0 inset-x-0 z-50 flex justify-center p-4 md:p-6 pointer-events-none">
     <div id="navbar-container"
       class="w-full max-w-6xl flex items-center justify-between px-5 py-3 transition-all duration-500 rounded-full border border-transparent pointer-events-auto">
@@ -85,7 +79,6 @@
           data-magnetic>
           <i data-feather="github" class="w-4 h-4"></i> GitHub
         </a>
-
         <button id="mobile-menu-btn"
           class="md:hidden text-white p-2 hover:bg-white/10 rounded-full transition-colors active:scale-90">
           <i data-feather="menu"></i>
@@ -106,115 +99,97 @@
           class="mobile-link text-2xl font-bold text-white active:scale-95 transition-transform block py-2">Certificates</a>
         <a href="#projects"
           class="mobile-link text-2xl font-bold text-white active:scale-95 transition-transform block py-2">Projects</a>
-        <a href="https://github.com/sattwik742"
-          class="mt-4 flex items-center gap-2 bg-white text-black px-12 py-4 text-lg rounded-full font-bold transition-all active:scale-95 hover:bg-zinc-200">
-          <i data-feather="github" class="w-5 h-5"></i> GitHub
-        </a>
       </div>
     </div>
   </nav>
 
-  <!-- Navbar -->
-
-  <!-- Main -->
   <main class="relative">
-    <!-- Hero Section -->
+
     <section id="hero"
-      class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden px-6">
+      class="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden px-6 bg-white">
       <div
-        class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:40px_40px]">
+        class="absolute inset-0 z-0 bg-[linear-gradient(to_right,#0000000a_1px,transparent_1px),linear-gradient(to_bottom,#0000000a_1px,transparent_1px)] bg-[size:40px_40px]">
       </div>
       <div id="hero-glow" class="pointer-events-none absolute inset-0 z-0 opacity-0 transition-opacity duration-500"
-        style="background: radial-gradient(400px circle at 50% 50%, rgba(255,255,255,0.05), transparent 80%);"></div>
-
-      <div class="absolute top-24 md:top-28 flex w-full max-w-5xl justify-between px-6 md:px-10 fade-in-up">
-        <div class="flex items-center gap-3 rounded-full border border-white/5 bg-white/5 px-4 py-2 backdrop-blur-md">
-          <span class="relative flex h-2 w-2">
-            <span
-              class="absolute inline-flex h-full w-full animate-ping-slow rounded-full bg-blue-500 opacity-75"></span>
-            <span class="relative inline-flex h-2 w-2 rounded-full bg-blue-500"></span>
-          </span>
-          <span class="text-[10px] font-bold tracking-widest text-zinc-400 uppercase">Odisha, IN</span>
-        </div>
-        <div class="hidden items-center gap-2 text-zinc-500 md:flex">
-          <i data-feather="map-pin" class="w-3 h-3 text-blue-500"></i>
-          <span id="live-time" class="text-[10px] font-bold tracking-widest uppercase">00:00 AM IST</span>
-        </div>
-      </div>
+        style="background: radial-gradient(400px circle at 50% 50%, rgba(0,0,0,0.03), transparent 80%);"></div>
 
       <div class="relative z-20 flex flex-col items-center text-center fade-in-up mt-10">
-        <h1 class="mb-6 max-w-3xl text-4xl font-bold tracking-tight text-white md:text-5xl lg:text-7xl font-space">
-          Hi, I'm <span class="text-zinc-400">Sattwik</span> <br />
+        <h1 class="mb-6 max-w-3xl text-4xl font-bold tracking-tight text-black md:text-5xl lg:text-7xl font-space">
+          Hi, I'm <span class="text-zinc-500">Sattwik</span> <br />
           <span class="text-zinc-600">I build </span>
-          <span id="flip-word" class="text-white transition-opacity duration-300">Modern</span>
-          <span class="text-zinc-200"> Websites</span>
+          <span id="flip-word" class="text-black transition-opacity duration-300">Modern</span>
+          <span class="text-zinc-400"> Websites</span>
         </h1>
-        <p class="mx-auto mb-10 max-w-md text-xs leading-relaxed text-zinc-500 md:text-sm">
-          MCA student & <span class="text-zinc-300">Frontend Developer</span>.
-          Crafting high-performance digital experiences with a focus on clean code and interactive motion.
+        <p class="mx-auto mb-10 max-w-2xl text-sm leading-relaxed text-zinc-600 md:text-base">
+          Aspiring Web Developer & MCA student with a strong foundation in modern web technologies.
+          Dedicated to building responsive, user-friendly interfaces, focusing on seamless experiences and visually
+          appealing designs.
         </p>
         <div class="flex flex-col items-center justify-center gap-10 md:flex-row">
-          <a href="#"
-            class="group relative flex h-12 w-44 items-center justify-center gap-3 rounded-full border border-zinc-800 bg-zinc-950 text-zinc-200 transition-all text-xs font-bold uppercase tracking-widest hover:border-zinc-700"
+          <a href="#projects"
+            class="group relative flex h-12 w-44 items-center justify-center gap-3 rounded-full border border-black bg-black text-white transition-all text-xs font-bold uppercase tracking-widest hover:bg-zinc-800"
             data-magnetic>
-            <i data-feather="download"
-              class="w-4 h-4 text-blue-500 transition-transform group-hover:-translate-y-1"></i>
-            Resume
+            <i data-feather="folder" class="w-4 h-4 text-blue-400 transition-transform group-hover:-translate-y-1"></i>
+            View Work
           </a>
           <a href="#contact"
-            class="group flex items-center gap-3 text-[10px] font-black tracking-[0.25em] text-zinc-500 uppercase transition-colors hover:text-white"
+            class="group flex items-center gap-3 text-[10px] font-black tracking-[0.25em] text-zinc-500 uppercase transition-colors hover:text-black"
             data-magnetic>
             Contact Me
             <i data-feather="message-square"
-              class="w-3.5 h-3.5 text-zinc-600 transition-transform group-hover:rotate-12 group-hover:text-blue-500"></i>
+              class="w-3.5 h-3.5 text-zinc-400 transition-transform group-hover:rotate-12 group-hover:text-blue-500"></i>
           </a>
         </div>
       </div>
 
-      <div class="absolute bottom-16 w-full">
+      <div class="absolute bottom-16 w-full z-10">
         <div class="relative flex overflow-hidden py-6 mask-marquee">
           <div class="flex min-w-full shrink-0 items-center justify-around gap-20 px-10 animate-marquee w-max">
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><i data-feather="layout"
-                class="text-[#61DAFB] w-5 h-5"></i><span
-                class="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500">React</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><i data-feather="globe"
-                class="text-white w-5 h-5"></i><span
-                class="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500">Next.js</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><i data-feather="code"
-                class="text-[#3178C6] w-5 h-5"></i><span
-                class="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500">TypeScript</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><i data-feather="cpu"
-                class="text-[#339933] w-5 h-5"></i><span
-                class="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500">Node.js</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><i data-feather="database"
-                class="text-[#47A248] w-5 h-5"></i><span
-                class="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500">MongoDB</span></div>
-
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><i data-feather="layout"
-                class="text-[#61DAFB] w-5 h-5"></i><span
-                class="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500">React</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><i data-feather="globe"
-                class="text-white w-5 h-5"></i><span
-                class="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500">Next.js</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><i data-feather="code"
-                class="text-[#3178C6] w-5 h-5"></i><span
-                class="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500">TypeScript</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><i data-feather="cpu"
-                class="text-[#339933] w-5 h-5"></i><span
-                class="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500">Node.js</span></div>
-            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><i data-feather="database"
-                class="text-[#47A248] w-5 h-5"></i><span
-                class="text-[10px] font-bold uppercase tracking-[0.2em] text-zinc-500">MongoDB</span></div>
+            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Java</span></div>
+            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Python</span></div>
+            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">HTML5</span></div>
+            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">CSS3</span></div>
+            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Tailwind</span></div>
+            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Vercel</span></div>
+            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Linux</span></div>
+            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Java</span></div>
+            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Python</span></div>
+            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">HTML5</span></div>
+            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">CSS3</span></div>
+            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Tailwind</span></div>
+            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Vercel</span></div>
+            <div class="flex items-center gap-3 grayscale hover:grayscale-0 transition-all"><span
+                class="text-[12px] font-bold uppercase tracking-[0.2em] text-zinc-400">Linux</span></div>
           </div>
         </div>
       </div>
-      <div class="absolute bottom-0 h-40 w-full bg-gradient-to-t from-background to-transparent"></div>
+      <div class="absolute bottom-0 h-40 w-full bg-gradient-to-t from-white to-transparent z-0"></div>
     </section>
 
     <section id="education" class="relative w-full bg-[#050505] py-24 md:py-48 text-white overflow-hidden">
       <div class="container relative z-10 mx-auto px-6 max-w-5xl">
-        <div class="mb-24 md:mb-40 fade-in-up">
+        <div class="mb-24 md:mb-40 flex items-end gap-6 fade-in-up">
           <h2 class="text-5xl md:text-6xl font-bold tracking-tighter leading-[0.9] font-space">Education</h2>
+
+          <div class="stairs-loader pb-2">
+            <div class="stair-bar"></div>
+            <div class="stair-bar"></div>
+            <div class="stair-bar"></div>
+            <div class="stair-bar"></div>
+          </div>
         </div>
 
         <div class="relative">
@@ -224,7 +199,7 @@
             </div>
           </div>
 
-          <div class="relative mb-24 last:mb-0 group fade-in-up">
+          <div class="relative mb-24 last:mb-0 group stair-step-up">
             <div
               class="absolute left-0 md:left-[calc(-27px-4px)] top-10 z-20 hidden md:block h-2 w-2 rounded-full border border-white/20 bg-zinc-950 transition-all duration-500 group-hover:bg-white group-hover:scale-150 group-hover:border-white">
             </div>
@@ -232,43 +207,27 @@
               <div class="space-y-3 pt-2">
                 <div
                   class="flex items-center gap-2 text-zinc-400 font-bold uppercase tracking-[0.2em] text-[10px] opacity-50 group-hover:opacity-100 transition-opacity">
-                  <i data-feather="calendar" class="w-3.5 h-3.5"></i>2025 — 2027
+                  <i data-feather="calendar" class="w-3.5 h-3.5"></i>2025 — Ongoing
                 </div>
                 <div class="flex items-center gap-2 text-zinc-600 font-semibold text-[9px] uppercase tracking-widest"><i
                     data-feather="map-pin" class="w-3.5 h-3.5"></i>Bhubaneswar</div>
               </div>
               <div
-                class="relative overflow-hidden rounded-3xl border border-white/5 bg-zinc-950/40 backdrop-blur-xl transition-all duration-700 hover:border-white/20">
-                <div
-                  class="absolute inset-0 bg-cover bg-center grayscale opacity-5 group-hover:opacity-20 group-hover:scale-105 transition-all duration-1000"
-                  style="background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2070&auto=format&fit=crop');">
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-950/95 to-transparent"></div>
-                <div class="relative z-10 p-8 md:p-12">
-                  <h3 class="text-3xl md:text-4xl font-bold tracking-tighter text-white leading-none font-space mb-5">
+                class="relative overflow-hidden rounded-3xl border border-white/5 bg-zinc-950/40 backdrop-blur-xl transition-all duration-700 hover:border-white/20 p-8 md:p-12">
+                <div class="relative z-10">
+                  <h3 class="text-3xl md:text-4xl font-bold tracking-tighter text-white leading-none font-space mb-3">
                     Master of Computer Applications</h3>
-                  <p class="text-zinc-500 text-lg font-medium tracking-tight">KIIT School of Computer Applications</p>
-                  <div class="mt-12 pt-8 border-t border-white/5">
-                    <div class="flex items-center gap-3 mb-6"><span
-                        class="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-500">Curriculum focus</span>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                      <span
-                        class="px-4 py-2 rounded-full bg-zinc-900/50 border border-white/5 text-[11px] font-medium text-zinc-400 hover:bg-white hover:text-black transition-all">Algorithms</span>
-                      <span
-                        class="px-4 py-2 rounded-full bg-zinc-900/50 border border-white/5 text-[11px] font-medium text-zinc-400 hover:bg-white hover:text-black transition-all">AI
-                        & ML</span>
-                      <span
-                        class="px-4 py-2 rounded-full bg-zinc-900/50 border border-white/5 text-[11px] font-medium text-zinc-400 hover:bg-white hover:text-black transition-all">Advanced
-                        Java</span>
-                    </div>
-                  </div>
+                  <p class="text-zinc-400 text-lg font-medium tracking-tight">Kalinga Institute of Industrial Technology
+                  </p>
+                  <p
+                    class="mt-4 inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-sm font-semibold text-zinc-300 border border-white/10">
+                    CGPA: 8.24</p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="relative mb-24 last:mb-0 group fade-in-up">
+          <div class="relative mb-24 last:mb-0 group stair-step-up" style="animation-delay: 0.2s;">
             <div
               class="absolute left-0 md:left-[calc(-27px-4px)] top-10 z-20 hidden md:block h-2 w-2 rounded-full border border-white/20 bg-zinc-950 transition-all duration-500 group-hover:bg-white group-hover:scale-150 group-hover:border-white">
             </div>
@@ -282,134 +241,173 @@
                     data-feather="map-pin" class="w-3.5 h-3.5"></i>Kolkata, WB</div>
               </div>
               <div
-                class="relative overflow-hidden rounded-3xl border border-white/5 bg-zinc-950/40 backdrop-blur-xl transition-all duration-700 hover:border-white/20">
-                <div
-                  class="absolute inset-0 bg-cover bg-center grayscale opacity-5 group-hover:opacity-20 group-hover:scale-105 transition-all duration-1000"
-                  style="background-image: url('https://images.pexels.com/photos/1205651/pexels-photo-1205651.jpeg');">
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-br from-zinc-950 via-zinc-950/95 to-transparent"></div>
-                <div class="relative z-10 p-8 md:p-12">
-                  <h3 class="text-3xl md:text-4xl font-bold tracking-tighter text-white leading-none font-space mb-5">
+                class="relative overflow-hidden rounded-3xl border border-white/5 bg-zinc-950/40 backdrop-blur-xl transition-all duration-700 hover:border-white/20 p-8 md:p-12">
+                <div class="relative z-10">
+                  <h3 class="text-3xl md:text-4xl font-bold tracking-tighter text-white leading-none font-space mb-3">
                     Bachelor of Computer Applications</h3>
-                  <p class="text-zinc-500 text-lg font-medium tracking-tight">RCC Institute of Information Technology
+                  <p class="text-zinc-400 text-lg font-medium tracking-tight">RCC Institute of Information Technology
                   </p>
-                  <div class="mt-12 pt-8 border-t border-white/5">
-                    <div class="flex items-center gap-3 mb-6"><span
-                        class="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-500">Curriculum focus</span>
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                      <span
-                        class="px-4 py-2 rounded-full bg-zinc-900/50 border border-white/5 text-[11px] font-medium text-zinc-400 hover:bg-white hover:text-black transition-all">Data
-                        Structures</span>
-                      <span
-                        class="px-4 py-2 rounded-full bg-zinc-900/50 border border-white/5 text-[11px] font-medium text-zinc-400 hover:bg-white hover:text-black transition-all">DBMS</span>
-                      <span
-                        class="px-4 py-2 rounded-full bg-zinc-900/50 border border-white/5 text-[11px] font-medium text-zinc-400 hover:bg-white hover:text-black transition-all">Networks</span>
-                    </div>
-                  </div>
+                  <p
+                    class="mt-4 inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-sm font-semibold text-zinc-300 border border-white/10">
+                    CGPA: 8.07</p>
                 </div>
               </div>
             </div>
           </div>
+
+          <div class="relative mb-24 last:mb-0 group stair-step-up" style="animation-delay: 0.4s;">
+            <div
+              class="absolute left-0 md:left-[calc(-27px-4px)] top-10 z-20 hidden md:block h-2 w-2 rounded-full border border-white/20 bg-zinc-950 transition-all duration-500 group-hover:bg-white group-hover:scale-150 group-hover:border-white">
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-8 items-start">
+              <div class="space-y-3 pt-2">
+                <div
+                  class="flex items-center gap-2 text-zinc-400 font-bold uppercase tracking-[0.2em] text-[10px] opacity-50 group-hover:opacity-100 transition-opacity">
+                  <i data-feather="calendar" class="w-3.5 h-3.5"></i>2019 — 2021
+                </div>
+                <div class="flex items-center gap-2 text-zinc-600 font-semibold text-[9px] uppercase tracking-widest"><i
+                    data-feather="map-pin" class="w-3.5 h-3.5"></i>Kolkata, WB</div>
+              </div>
+              <div
+                class="relative overflow-hidden rounded-3xl border border-white/5 bg-zinc-950/40 backdrop-blur-xl transition-all duration-700 hover:border-white/20 p-8 md:p-12">
+                <div class="relative z-10">
+                  <h3 class="text-2xl md:text-3xl font-bold tracking-tighter text-white leading-none font-space mb-3">
+                    Higher Secondary (Science) WBCHSE</h3>
+                  <p class="text-zinc-400 text-lg font-medium tracking-tight">Baranagar Narendranath Vidyamandir</p>
+                  <p
+                    class="mt-4 inline-flex items-center rounded-full bg-white/5 px-3 py-1 text-sm font-semibold text-zinc-300 border border-white/10">
+                    Percentage: 87.4%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <section id="skills" class="relative bg-black py-32 overflow-hidden">
+    <section id="skills" class="relative bg-white py-32 overflow-hidden">
       <div class="container relative z-10 mx-auto px-6 max-w-6xl">
         <div class="mb-20 fade-in-up">
-          <h2 class="text-5xl md:text-6xl font-black tracking-tighter text-white mb-6 font-space">Skills</h2>
-          <p class="text-zinc-500 text-xl max-w-lg leading-relaxed font-medium">Technical proficiencies in building
+          <h2 class="text-5xl md:text-6xl font-black tracking-tighter text-black mb-6 font-space">Skills</h2>
+          <p class="text-zinc-600 text-xl max-w-lg leading-relaxed font-medium">Technical proficiencies in building
             scalable systems and interactive interfaces.</p>
         </div>
-
         <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           <div
-            class="spotlight-card group relative overflow-hidden rounded-[23px] bg-zinc-950 p-8 border border-white/5 lg:col-span-1 fade-in-up">
+            class="spotlight-card dark-spotlight group relative overflow-hidden rounded-[23px] bg-zinc-50 p-8 border border-black/10 hover:border-black/20 transition-all lg:col-span-1 fade-in-up">
             <div class="relative z-10">
               <div class="flex items-center gap-4 mb-6">
                 <div
-                  class="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-zinc-900 shadow-xl transition-transform group-hover:scale-110 duration-300">
-                  <i data-feather="code" class="text-white w-5 h-5"></i>
+                  class="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-white shadow-sm transition-transform group-hover:scale-110 duration-300">
+                  <i data-feather="code" class="text-black w-5 h-5"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-white tracking-tight">Languages</h3>
+                <h3 class="text-2xl font-bold text-black tracking-tight">Languages</h3>
               </div>
             </div>
             <div class="relative z-10 flex flex-wrap gap-2 mt-10">
               <div
-                class="flex items-center gap-2 rounded-xl border border-white/5 bg-white/5 px-3 py-2 hover:bg-white/10 hover:border-white/20 transition-all">
-                <img src="https://cdn.simpleicons.org/javascript/e5e7eb"
-                  class="h-4 w-4 opacity-70 group-hover:opacity-100" alt="JS">
+                class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
+                <img src="https://cdn.simpleicons.org/openjdk/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
+                  alt="Java">
                 <span
-                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 group-hover:text-white">JavaScript</span>
+                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Java</span>
               </div>
               <div
-                class="flex items-center gap-2 rounded-xl border border-white/5 bg-white/5 px-3 py-2 hover:bg-white/10 hover:border-white/20 transition-all">
-                <img src="https://cdn.simpleicons.org/python/e5e7eb" class="h-4 w-4 opacity-70 group-hover:opacity-100"
+                class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
+                <img src="https://cdn.simpleicons.org/python/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
                   alt="Python">
                 <span
-                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 group-hover:text-white">Python</span>
+                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Python</span>
               </div>
             </div>
           </div>
 
           <div
-            class="spotlight-card group relative overflow-hidden rounded-[23px] bg-zinc-950 p-8 border border-white/5 lg:col-span-2 fade-in-up"
+            class="spotlight-card dark-spotlight group relative overflow-hidden rounded-[23px] bg-zinc-50 p-8 border border-black/10 hover:border-black/20 transition-all lg:col-span-2 fade-in-up"
             style="animation-delay: 0.1s;">
             <div class="relative z-10">
               <div class="flex items-center gap-4 mb-6">
                 <div
-                  class="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-zinc-900 shadow-xl transition-transform group-hover:scale-110 duration-300">
-                  <i data-feather="layout" class="text-white w-5 h-5"></i>
+                  class="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-white shadow-sm transition-transform group-hover:scale-110 duration-300">
+                  <i data-feather="layout" class="text-black w-5 h-5"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-white tracking-tight">Frontend</h3>
+                <h3 class="text-2xl font-bold text-black tracking-tight">Frontend</h3>
               </div>
             </div>
             <div class="relative z-10 flex flex-wrap gap-2 mt-10">
               <div
-                class="flex items-center gap-2 rounded-xl border border-white/5 bg-white/5 px-3 py-2 hover:bg-white/10 hover:border-white/20 transition-all">
-                <img src="https://cdn.simpleicons.org/react/e5e7eb" class="h-4 w-4 opacity-70 group-hover:opacity-100"
-                  alt="React">
+                class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
+                <img src="https://cdn.simpleicons.org/html5/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
+                  alt="HTML5">
                 <span
-                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 group-hover:text-white">React</span>
+                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">HTML5</span>
               </div>
               <div
-                class="flex items-center gap-2 rounded-xl border border-white/5 bg-white/5 px-3 py-2 hover:bg-white/10 hover:border-white/20 transition-all">
-                <img src="https://cdn.simpleicons.org/tailwindcss/e5e7eb"
+                class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
+                <img src="https://cdn.simpleicons.org/css/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
+                  alt="CSS3">
+                <span
+                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">CSS</span>
+              </div>
+              <div
+                class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
+                <img src="https://cdn.simpleicons.org/tailwindcss/000000"
                   class="h-4 w-4 opacity-70 group-hover:opacity-100" alt="Tailwind">
                 <span
-                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 group-hover:text-white">Tailwind
+                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Tailwind
                   CSS</span>
               </div>
             </div>
           </div>
 
           <div
-            class="spotlight-card group relative overflow-hidden rounded-[23px] bg-zinc-950 p-8 border border-white/5 lg:col-span-3 fade-in-up"
+            class="spotlight-card dark-spotlight group relative overflow-hidden rounded-[23px] bg-zinc-50 p-8 border border-black/10 hover:border-black/20 transition-all lg:col-span-3 fade-in-up"
             style="animation-delay: 0.2s;">
             <div class="relative z-10">
               <div class="flex items-center gap-4 mb-6">
                 <div
-                  class="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-zinc-900 shadow-xl transition-transform group-hover:scale-110 duration-300">
-                  <i data-feather="server" class="text-white w-5 h-5"></i>
+                  class="flex h-12 w-12 items-center justify-center rounded-2xl border border-black/10 bg-white shadow-sm transition-transform group-hover:scale-110 duration-300">
+                  <i data-feather="tool" class="text-black w-5 h-5"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-white tracking-tight">Backend & Databases</h3>
+                <h3 class="text-2xl font-bold text-black tracking-tight">Systems, Deployment & Tools</h3>
               </div>
             </div>
             <div class="relative z-10 flex flex-wrap gap-2 mt-10">
               <div
-                class="flex items-center gap-2 rounded-xl border border-white/5 bg-white/5 px-3 py-2 hover:bg-white/10 hover:border-white/20 transition-all">
-                <img src="https://cdn.simpleicons.org/nodedotjs/e5e7eb"
-                  class="h-4 w-4 opacity-70 group-hover:opacity-100" alt="Node">
+                class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
+                <img src="https://cdn.simpleicons.org/linux/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
+                  alt="Linux">
                 <span
-                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 group-hover:text-white">Node.js</span>
+                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">GNU/Linux</span>
               </div>
               <div
-                class="flex items-center gap-2 rounded-xl border border-white/5 bg-white/5 px-3 py-2 hover:bg-white/10 hover:border-white/20 transition-all">
-                <img src="https://cdn.simpleicons.org/mongodb/e5e7eb" class="h-4 w-4 opacity-70 group-hover:opacity-100"
-                  alt="MongoDB">
+                class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
+                <img src="https://cdn.simpleicons.org/git/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
+                  alt="Git">
+                <span class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Git &
+                  GitHub</span>
+              </div>
+              <div
+                class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
+                <img src="https://cdn.simpleicons.org/vercel/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
+                  alt="Vercel">
                 <span
-                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-500 group-hover:text-white">MongoDB</span>
+                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Vercel</span>
+              </div>
+              <div
+                class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
+                <img src="https://cdn.simpleicons.org/netlify/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
+                  alt="Netlify">
+                <span
+                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Netlify</span>
+              </div>
+              <div
+                class="flex items-center gap-2 rounded-xl border border-black/5 bg-black/5 px-3 py-2 hover:bg-black/10 hover:border-black/20 transition-all">
+                <img src="https://cdn.simpleicons.org/vim/000000" class="h-4 w-4 opacity-70 group-hover:opacity-100"
+                  alt="Vim">
+                <span
+                  class="text-[10px] font-bold uppercase tracking-widest text-zinc-600 group-hover:text-black">Vim</span>
               </div>
             </div>
           </div>
@@ -432,28 +430,15 @@
                   class="w-14 h-14 flex items-center justify-center rounded-2xl bg-zinc-900 border border-white/10 text-zinc-400 group-hover:scale-110 group-hover:text-[#4285F4] transition-all shadow-xl">
                   <i data-feather="award" class="w-6 h-6"></i>
                 </div>
-                <a href="#"
-                  class="flex h-11 w-11 items-center justify-center rounded-full bg-white/5 border border-white/10 text-zinc-500 hover:text-white hover:bg-white/10 transition-all hover:scale-110 hover:rotate-6"
-                  data-magnetic>
-                  <i data-feather="external-link" class="w-4 h-4"></i>
-                </a>
               </div>
               <div class="space-y-4">
                 <div class="flex items-center gap-3">
                   <span
-                    class="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[9px] font-bold uppercase tracking-widest text-zinc-500">Google</span>
+                    class="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[9px] font-bold uppercase tracking-widest text-zinc-500">Coursera</span>
                   <div class="h-px w-8 bg-white/10"></div>
                   <span class="text-[9px] font-bold uppercase tracking-widest text-zinc-600">April 2024</span>
                 </div>
-                <h3 class="text-2xl font-bold tracking-tight text-white font-space">Python Crash Course</h3>
-                <p class="text-sm text-zinc-500 leading-relaxed">Deep dive into Python syntax, data structures, and
-                  automation scripts.</p>
-              </div>
-            </div>
-            <div class="relative z-10 mt-12 flex items-center justify-between pt-6 border-t border-white/5">
-              <div class="flex items-center gap-2 group/verify">
-                <i data-feather="shield" class="w-3.5 h-3.5 text-emerald-500 group-hover/verify:animate-pulse"></i>
-                <span class="text-[10px] font-bold text-zinc-500 uppercase tracking-tighter">Verified Credential</span>
+                <h3 class="text-2xl font-bold tracking-tight text-white font-space">Google Python Crash Course</h3>
               </div>
             </div>
           </div>
@@ -467,11 +452,6 @@
                   class="w-14 h-14 flex items-center justify-center rounded-2xl bg-zinc-900 border border-white/10 text-zinc-400 group-hover:scale-110 group-hover:text-[#2EC866] transition-all shadow-xl">
                   <i data-feather="award" class="w-6 h-6"></i>
                 </div>
-                <a href="#"
-                  class="flex h-11 w-11 items-center justify-center rounded-full bg-white/5 border border-white/10 text-zinc-500 hover:text-white hover:bg-white/10 transition-all hover:scale-110 hover:rotate-6"
-                  data-magnetic>
-                  <i data-feather="external-link" class="w-4 h-4"></i>
-                </a>
               </div>
               <div class="space-y-4">
                 <div class="flex items-center gap-3">
@@ -480,15 +460,29 @@
                   <div class="h-px w-8 bg-white/10"></div>
                   <span class="text-[9px] font-bold uppercase tracking-widest text-zinc-600">June 2024</span>
                 </div>
-                <h3 class="text-2xl font-bold tracking-tight text-white font-space">SQL (Basic) Mastery</h3>
-                <p class="text-sm text-zinc-500 leading-relaxed">Expertise in complex queries, relational logic, and
-                  database aggregation.</p>
+                <h3 class="text-2xl font-bold tracking-tight text-white font-space">SQL (Basic) Certificate</h3>
               </div>
             </div>
-            <div class="relative z-10 mt-12 flex items-center justify-between pt-6 border-t border-white/5">
-              <div class="flex items-center gap-2 group/verify">
-                <i data-feather="shield" class="w-3.5 h-3.5 text-emerald-500 group-hover/verify:animate-pulse"></i>
-                <span class="text-[10px] font-bold text-zinc-500 uppercase tracking-tighter">Verified Credential</span>
+          </div>
+
+          <div
+            class="spotlight-card group relative flex flex-col justify-between overflow-hidden rounded-[2.5rem] border border-white/5 bg-zinc-900/20 backdrop-blur-md p-8 transition-all duration-500 hover:border-white/20 hover:bg-zinc-900/40 fade-in-up"
+            style="animation-delay: 0.2s;">
+            <div class="relative z-10">
+              <div class="flex items-center justify-between mb-10">
+                <div
+                  class="w-14 h-14 flex items-center justify-center rounded-2xl bg-zinc-900 border border-white/10 text-zinc-400 group-hover:scale-110 group-hover:text-[#38BDF8] transition-all shadow-xl">
+                  <i data-feather="award" class="w-6 h-6"></i>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-center gap-3">
+                  <span
+                    class="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[9px] font-bold uppercase tracking-widest text-zinc-500">HackerRank</span>
+                  <div class="h-px w-8 bg-white/10"></div>
+                  <span class="text-[9px] font-bold uppercase tracking-widest text-zinc-600">Dec 2024</span>
+                </div>
+                <h3 class="text-2xl font-bold tracking-tight text-white font-space">CSS (Basic) Certificate</h3>
               </div>
             </div>
           </div>
@@ -496,25 +490,42 @@
       </div>
     </section>
 
-    <section id="projects" class="py-32 px-6 bg-black font-space overflow-hidden">
+    <section id="projects" class="py-32 px-6 bg-white font-space overflow-hidden">
       <div class="max-w-7xl mx-auto fade-in-up">
-        <div class="mb-20 border-l border-white pl-6">
-          <h2 class="text-5xl md:text-6xl font-bold text-white tracking-tighter leading-none">Projects</h2>
+        <div class="mb-20 border-l border-black pl-6">
+          <h2 class="text-5xl md:text-6xl font-bold text-black tracking-tighter leading-none">Projects</h2>
         </div>
 
-        <div
-          class="relative h-[60vh] w-full border border-white/10 flex flex-col items-center justify-center bg-zinc-950/50 group overflow-hidden">
-          <div class="text-center z-10">
-            <h3 class="text-4xl md:text-6xl font-bold text-white tracking-[0.2em] uppercase mb-4">Coming Soon</h3>
+        <div class="grid grid-cols-1 gap-8">
+          <div
+            class="spotlight-card dark-spotlight group relative overflow-hidden rounded-[2.5rem] border border-black/10 bg-zinc-50 p-8 md:p-12 transition-all duration-500 hover:border-black/20 hover:shadow-lg">
+            <div class="relative z-10 flex flex-col md:flex-row gap-8 justify-between">
+              <div class="flex flex-col gap-4 max-w-2xl">
+                <div class="flex gap-2">
+                  <span
+                    class="px-3 py-1 rounded-full bg-black/5 border border-black/10 text-xs font-bold text-zinc-700">HTML</span>
+                  <span
+                    class="px-3 py-1 rounded-full bg-black/5 border border-black/10 text-xs font-bold text-zinc-700">CSS</span>
+                  <span
+                    class="px-3 py-1 rounded-full bg-black/5 border border-black/10 text-xs font-bold text-zinc-700">Netlify</span>
+                </div>
+                <h3 class="text-3xl md:text-4xl font-bold text-black">K{devs}</h3>
+                <p class="text-zinc-500 font-medium tracking-widest text-sm uppercase">Coding Club Registration Website
+                </p>
+                <p class="text-zinc-600 leading-relaxed mt-4">
+                  Developed a website to centralize coding club resources and event updates, which resolved low student
+                  engagement and streamlined the member recruitment process. Student engagement increased by 20%.
+                </p>
+              </div>
+              <div class="flex items-start md:justify-end">
+                <a href="https://kodingclub.netlify.app/" target="_blank"
+                  class="flex h-14 w-14 items-center justify-center rounded-full bg-black text-white hover:bg-zinc-800 transition-all hover:scale-110 shadow-md"
+                  data-magnetic>
+                  <i data-feather="arrow-up-right" class="w-6 h-6"></i>
+                </a>
+              </div>
+            </div>
           </div>
-
-          <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-white/30"></div>
-          <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-white/30"></div>
-          <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-white/30"></div>
-          <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-white/30"></div>
-
-          <div id="scanner"
-            class="absolute left-0 right-0 h-px bg-white/30 z-0 shadow-[0_0_10px_rgba(255,255,255,0.5)]"></div>
         </div>
       </div>
     </section>
@@ -524,12 +535,8 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start" id="contact-content">
 
           <div class="flex flex-col fade-in-up">
-            <h2 class="text-5xl md:text-6xl font-bold text-white mb-8 tracking-tighter leading-none">
-              Get In Touch
-            </h2>
-            <p class="text-zinc-500 text-xl mb-12 max-w-md leading-relaxed">
-              Let's build something monochrome and magnificent.
-            </p>
+            <h2 class="text-5xl md:text-6xl font-bold text-white mb-8 tracking-tighter leading-none">Get In Touch</h2>
+            <p class="text-zinc-500 text-xl mb-12 max-w-md leading-relaxed">Let's build something magnificent.</p>
 
             <div class="space-y-8 mb-12">
               <a href="mailto:sattwik211@gmail.com" class="block w-fit group">
@@ -545,6 +552,19 @@
                 </div>
               </a>
 
+              <a href="tel:+916289073480" class="block w-fit group">
+                <div class="flex items-center gap-6">
+                  <div
+                    class="w-12 h-12 flex items-center justify-center border border-white/10 text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
+                    <i data-feather="phone" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <p class="text-zinc-500 text-[10px] uppercase tracking-[0.3em] font-bold mb-1">Phone</p>
+                    <p class="text-white text-lg font-medium">+91 6289073480</p>
+                  </div>
+                </div>
+              </a>
+
               <div class="flex items-center gap-6 group">
                 <div
                   class="w-12 h-12 flex items-center justify-center border border-white/10 text-white group-hover:bg-white group-hover:text-black transition-all duration-300">
@@ -552,17 +572,17 @@
                 </div>
                 <div>
                   <p class="text-zinc-500 text-[10px] uppercase tracking-[0.3em] font-bold mb-1">Location</p>
-                  <p class="text-white text-lg font-medium">Bhubaneswar, India</p>
+                  <p class="text-white text-lg font-medium">Kolkata, West Bengal</p>
                 </div>
               </div>
             </div>
 
             <div class="flex gap-4">
-              <a href="https://github.com/sattwik742" target="_blank" rel="noopener noreferrer"
+              <a href="https://github.com/" target="_blank" rel="noopener noreferrer"
                 class="w-12 h-12 flex items-center justify-center border border-white/10 text-zinc-400 hover:text-white hover:border-white transition-all transform hover:-translate-y-0.5">
                 <i data-feather="github" class="w-5 h-5"></i>
               </a>
-              <a href="https://www.linkedin.com/in/sattwik2025" target="_blank" rel="noopener noreferrer"
+              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
                 class="w-12 h-12 flex items-center justify-center border border-white/10 text-zinc-400 hover:text-white hover:border-white transition-all transform hover:-translate-y-0.5">
                 <i data-feather="linkedin" class="w-5 h-5"></i>
               </a>
@@ -588,7 +608,6 @@
                       class="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder:text-zinc-800 focus:border-white outline-none transition-all">
                   </div>
                 </div>
-
                 <div class="relative group">
                   <label for="message"
                     class="text-zinc-500 text-xs font-bold uppercase tracking-[0.2em] mb-2 block transition-colors group-focus-within:text-white">Your
@@ -596,7 +615,6 @@
                   <textarea id="message" name="message" required rows="4" placeholder="DESCRIBE YOUR PROJECT"
                     class="w-full bg-transparent border-b border-white/20 py-3 text-white placeholder:text-zinc-800 focus:border-white outline-none transition-all resize-none"></textarea>
                 </div>
-
                 <button type="submit" id="submitBtn"
                   class="w-full bg-white text-black font-bold py-6 uppercase tracking-[0.3em] flex items-center justify-center gap-3 hover:bg-zinc-200 transition-colors active:scale-95 disabled:opacity-50">
                   <span id="btnText">Send Message</span>
@@ -613,71 +631,30 @@
           <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mx-auto mb-8">
             <i data-feather="check-circle" class="text-black w-10 h-10"></i>
           </div>
-          <h2 class="text-4xl font-bold text-white mb-4 tracking-tighter uppercase">
-            Confirmed
-          </h2>
-          <p class="text-zinc-400 text-lg leading-relaxed">
-            Your message has been received. Expect a response shortly.
+          <h2 class="text-4xl font-bold text-white mb-4 tracking-tighter uppercase">Confirmed</h2>
+          <p class="text-zinc-400 text-lg leading-relaxed">Your message has been received. Expect a response shortly.
           </p>
           <button id="resetFormBtn"
-            class="mt-10 w-full py-4 text-white border border-white transition-colors font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-black">
-            Send Another
-          </button>
+            class="mt-10 w-full py-4 text-white border border-white transition-colors font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-black">Send
+            Another</button>
         </div>
-
       </div>
     </section>
   </main>
 
   <footer class="border-t border-white/10 bg-black py-12 px-4 md:px-6">
     <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 mb-12">
-        <div class="col-span-2 lg:col-span-1">
-          <p class="text-zinc-400 text-sm leading-relaxed max-w-xs font-sans">
-            Building modern web experiences with cutting-edge technologies and minimal design.
-          </p>
-        </div>
-
-        <div class="flex flex-col gap-4">
-          <h3 class="text-white font-bold text-sm font-sans">Sattwik</h3>
-          <ul class="flex flex-col gap-2">
-            <li><a href="#" class="text-zinc-400 hover:text-white text-sm transition-colors font-sans">About</a></li>
-            <li><a href="#contact"
-                class="text-zinc-400 hover:text-white text-sm transition-colors font-sans">Contact</a></li>
-            <li><a href="#" class="text-zinc-400 hover:text-white text-sm transition-colors font-sans">Blog</a></li>
-          </ul>
-        </div>
-
-        <div class="flex flex-col gap-4">
-          <h3 class="text-white font-bold text-sm font-sans">Social</h3>
-          <ul class="flex flex-col gap-2">
-            <li><a href="https://github.com/sattwik742" target="_blank"
-                class="text-zinc-400 hover:text-white text-sm transition-colors font-sans">GitHub</a></li>
-            <li><a href="https://linkedin.com" target="_blank"
-                class="text-zinc-400 hover:text-white text-sm transition-colors font-sans">LinkedIn</a></li>
-            <li><a href="https://instagram.com" target="_blank"
-                class="text-zinc-400 hover:text-white text-sm transition-colors font-sans">Instagram</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
         <p class="text-zinc-500 text-xs font-sans">
-          © <span id="current-year"></span> Sattwik. All rights reserved.
+          © <span id="current-year"></span> Sattwik Sinha Mahapatra. All rights reserved.
         </p>
 
         <div class="flex items-center gap-5">
-          <a href="https://github.com/sattwik742" target="_blank"
-            class="text-zinc-400 hover:text-white transition-colors">
+          <a href="https://github.com/" target="_blank" class="text-zinc-400 hover:text-white transition-colors">
             <i data-feather="github" class="w-5 h-5"></i>
           </a>
-          <a href="https://www.linkedin.com/in/sattwik2025" target="_blank"
-            class="text-zinc-400 hover:text-white transition-colors">
+          <a href="https://linkedin.com/" target="_blank" class="text-zinc-400 hover:text-white transition-colors">
             <i data-feather="linkedin" class="w-5 h-5"></i>
-          </a>
-          <a href="https://www.instagram.com/sattwik_23" target="_blank"
-            class="text-zinc-400 hover:text-white transition-colors">
-            <i data-feather="instagram" class="w-5 h-5"></i>
           </a>
         </div>
       </div>

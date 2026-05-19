@@ -1,19 +1,8 @@
 // Initialize Feather Icons
 feather.replace();
 
-// 1. Clock (Live Time IST)
-function updateTime() {
-    const now = new Date();
-    const timeString = now.toLocaleTimeString("en-IN", {
-        hour: "2-digit", minute: "2-digit", hour12: true, timeZone: "Asia/Kolkata"
-    });
-    document.getElementById('live-time').innerText = timeString + " IST";
-}
-setInterval(updateTime, 1000);
-updateTime();
-
-// 2. Flip Words Animation
-const words = ["Modern", "Scalable", "Dynamic", "Seamless"];
+// 1. Flip Words Animation
+const words = ["Responsive", "Modern", "Dynamic", "Scalable"];
 let wordIndex = 0;
 const flipEl = document.getElementById('flip-word');
 setInterval(() => {
@@ -25,7 +14,7 @@ setInterval(() => {
     }, 300);
 }, 3000);
 
-// 3. Navbar Scroll Blur & Mobile Menu
+// 2. Navbar Scroll Blur & Mobile Menu
 const navbar = document.getElementById('navbar-container');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 20) {
@@ -67,7 +56,7 @@ document.querySelectorAll('.mobile-link').forEach(link => {
     });
 });
 
-// 4. Custom Cursor Logic (Lerp + Magnetic)
+// 3. Custom Cursor Logic (Lerp + Magnetic)
 const cursorRing = document.getElementById('cursor-ring');
 const cursorDot = document.getElementById('cursor-dot');
 let mouseX = -100, mouseY = -100;
@@ -133,18 +122,20 @@ function animateCursor() {
 }
 if (window.innerWidth >= 1024) animateCursor();
 
-// 5. Spotlight Hover Effect & Hero Glow Tracking
+// 4. Spotlight Hover Effect & Hero Glow Tracking
 const heroSection = document.getElementById('hero');
 const heroGlow = document.getElementById('hero-glow');
 
-heroSection.addEventListener('mousemove', (e) => {
-    const rect = heroSection.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    heroGlow.style.background = `radial-gradient(400px circle at ${x}px ${y}px, rgba(255,255,255,0.05), transparent 80%)`;
-});
-heroSection.addEventListener('mouseenter', () => heroGlow.style.opacity = 1);
-heroSection.addEventListener('mouseleave', () => heroGlow.style.opacity = 0);
+if (heroSection && heroGlow) {
+    heroSection.addEventListener('mousemove', (e) => {
+        const rect = heroSection.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        heroGlow.style.background = `radial-gradient(400px circle at ${x}px ${y}px, rgba(0,0,0,0.03), transparent 80%)`;
+    });
+    heroSection.addEventListener('mouseenter', () => heroGlow.style.opacity = 1);
+    heroSection.addEventListener('mouseleave', () => heroGlow.style.opacity = 0);
+}
 
 document.querySelectorAll('.spotlight-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
@@ -154,7 +145,7 @@ document.querySelectorAll('.spotlight-card').forEach(card => {
     });
 });
 
-// 6. Scroll Animations (Intersection Observer & Timeline)
+// 5. Scroll Animations (Intersection Observer & Timeline)
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -164,12 +155,13 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
 
-document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+document.querySelectorAll('.fade-in-up, .stair-step-up').forEach(el => observer.observe(el));
 
 // Education Timeline Progress
 const educationSection = document.getElementById('education');
 const timelineProgress = document.getElementById('timeline-progress');
 window.addEventListener('scroll', () => {
+    if (!educationSection) return;
     const rect = educationSection.getBoundingClientRect();
     const windowHeight = window.innerHeight;
     let progress = (windowHeight - rect.top) / (rect.height + windowHeight / 2);
@@ -179,19 +171,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// 7. Scanner Line Animation (Projects)
-const scanner = document.getElementById('scanner');
-let scannerPos = 0;
-let scannerDir = 1;
-function animateScanner() {
-    scannerPos += 0.5 * scannerDir;
-    if (scannerPos > 100 || scannerPos < 0) scannerDir *= -1;
-    scanner.style.top = `${scannerPos}%`;
-    requestAnimationFrame(animateScanner);
-}
-animateScanner();
-
-// 8. Contact Form Handling (Formspree Integration)
+// 6. Contact Form Handling
 const form = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
 const btnText = document.getElementById('btnText');
@@ -205,41 +185,24 @@ if (form) {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
 
-        // Show loading UI
         submitBtn.disabled = true;
         btnText.classList.add('hidden');
         btnIcon.classList.add('hidden');
         btnLoader.classList.remove('hidden');
 
-        const formData = new FormData(form);
+        // Form submission simulation or actual endpoint 
+        // e.g. using Fetch API to a service provider
+        setTimeout(() => {
+            contactContent.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+            successMessage.classList.add('flex');
+            form.reset();
 
-        try {
-            const response = await fetch('https://formspree.io/f/xjgaaoeg', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-
-            if (response.ok) {
-                // Hide form, show success message
-                contactContent.classList.add('hidden');
-                successMessage.classList.remove('hidden');
-                successMessage.classList.add('flex');
-                form.reset();
-            } else {
-                alert('Oops! There was a problem submitting your form');
-            }
-        } catch (error) {
-            alert('Oops! There was a problem submitting your form');
-        } finally {
-            // Revert loading UI
             submitBtn.disabled = false;
             btnText.classList.remove('hidden');
             btnIcon.classList.remove('hidden');
             btnLoader.classList.add('hidden');
-        }
+        }, 1500);
     });
 }
 
@@ -251,5 +214,5 @@ if (resetFormBtn) {
     });
 }
 
-// 9. Set Current Year in Footer
+// 7. Set Current Year in Footer
 document.getElementById('current-year').textContent = new Date().getFullYear();
